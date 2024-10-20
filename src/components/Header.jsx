@@ -26,14 +26,14 @@ export default function Header() {
   return (
     <header>
       <nav
-        className={`fixed w-full bg-violet-800 text-white transition-transform duration-500 z-50 ${
+        className={`fixed w-full bg-violet-500 text-white transition-transform duration-500 z-50 ${
           isNavVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/images/l3.png"
+              src="/images/l2.png"
               alt="InnoApps Logo"
               width={50}
               height={40}
