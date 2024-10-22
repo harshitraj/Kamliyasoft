@@ -6,6 +6,7 @@ export interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   // Optional: Add any custom properties you may want to use in the Textarea
   // exampleProp?: string; // For demonstration purposes
+  placeholder?: string;
 }
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
