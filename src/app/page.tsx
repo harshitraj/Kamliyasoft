@@ -8,14 +8,14 @@ import { Textarea } from "@/components/ui/textarea";
 import {
   Card,
   CardContent,
-  CardDescription,
+  // CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import {
-  ChevronDown,
+  // ChevronDown,
   ChevronRight,
-  Menu,
+  // Menu,
   Star,
   ChevronLeft,
 } from "lucide-react";
@@ -76,14 +76,14 @@ export default function Home() {
   return (
     <main>
       <section className="bg-gradient-to-r from-violet-700 to-purple-600 text-white py-32 relative overflow-hidden">
-        
-      <video
-            className="absolute top-0 left-0 w-full h-full object-cover z-0"
-            autoPlay
-            muted
-            loop
-            src="/images/v3.mp4" // Replace with your video file path
-          />
+
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          autoPlay
+          muted
+          loop
+          src="/images/v3.mp4" // Replace with your video file path
+        />
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center min-h-screen">
           <h1 className="text-3xl font-bold mb-6 text-center animate-fade-in-down">
             Unlock
@@ -254,11 +254,10 @@ export default function Home() {
             ].map((project, index) => (
               <div
                 key={index}
-                className={`transition-opacity duration-500 ${
-                  index === activeSlide
+                className={`transition-opacity duration-500 ${index === activeSlide
                     ? "opacity-100"
                     : "opacity-0 absolute inset-0"
-                }`}
+                  }`}
               >
                 <Card className="bg-violet-100">
                   <CardContent className="flex flex-col md:flex-row items-center p-6">
@@ -372,9 +371,8 @@ export default function Home() {
               <button
                 key={index}
                 onClick={() => setCurrentReview(index)}
-                className={`w-3 h-3 rounded-full mx-1 ${
-                  index === currentReview ? "bg-violet-500" : "bg-violet-200"
-                }`}
+                className={`w-3 h-3 rounded-full mx-1 ${index === currentReview ? "bg-violet-500" : "bg-violet-200"
+                  }`}
                 aria-label={`Go to review ${index + 1}`}
               />
             ))}

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button"; // Ensure Shadcn Button is imported
 import { useState, useEffect } from "react";
-import { ChevronDown, Menu } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react"; // Ensure these icons are used
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -14,6 +14,7 @@ import {
 
 export default function Header() {
   const [isNavVisible, setIsNavVisible] = useState(false);
+  const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -26,9 +27,8 @@ export default function Header() {
   return (
     <header>
       <nav
-        className={`fixed w-full bg-violet-500 text-white transition-transform duration-500 z-50 ${
-          isNavVisible ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`fixed w-full bg-violet-500 text-white transition-transform duration-500 z-50 ${isNavVisible ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
@@ -39,7 +39,7 @@ export default function Header() {
               height={40}
             />
             <span className="text-sm bg-violet-500 text-white px-2 py-1 rounded">
-              We're Hiring
+              We&apos;re Hiring
             </span>
           </Link>
 
@@ -47,10 +47,26 @@ export default function Header() {
           <Button
             variant="ghost"
             className="md:hidden"
-            onClick={() => setIsNavVisible(!isNavVisible)}
+            onClick={() => setIsMobileNavVisible(!isMobileNavVisible)}
           >
             <Menu />
           </Button>
+
+          {/* Mobile menu (visible when toggled) */}
+          {isMobileNavVisible && (
+            <div className="md:hidden flex flex-col space-y-4 mt-4">
+              <Link href="/Industry">Industry</Link>
+              <Link href="/Work">Work</Link>
+              <Link href="/About">About Us</Link>
+              <Link href="/Blogs">Blogs</Link>
+              <Button
+                variant="secondary"
+                className="bg-gradient-to-r from-violet-300 to-indigo-500 hover:from-violet-600 hover:to-indigo-600 text-white rounded-full"
+              >
+                Contact Us
+              </Button>
+            </div>
+          )}
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-6">
