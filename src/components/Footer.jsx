@@ -56,7 +56,7 @@ export default function Footer() {
                 <div>
                   <h3 className="text-sm font-bold mb-2">Estimate Your Project</h3>
                   <p className="mb-2 text-violet-300 text-sm">
-                    You'll be pleasantly surprised
+                    You&apos;ll be pleasantly surprised
                   </p>
                 </div>
                 <div>

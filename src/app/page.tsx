@@ -255,8 +255,8 @@ export default function Home() {
               <div
                 key={index}
                 className={`transition-opacity duration-500 ${index === activeSlide
-                    ? "opacity-100"
-                    : "opacity-0 absolute inset-0"
+                  ? "opacity-100"
+                  : "opacity-0 absolute inset-0"
                   }`}
               >
                 <Card className="bg-violet-100">
@@ -305,7 +305,7 @@ export default function Home() {
           <div className="relative max-w-3xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-8 md:p-12 border border-violet-200">
               <div className="text-violet-500 text-6xl font-serif absolute top-4 left-4">
-                "
+                &quot;
               </div>
               <div className="mb-6">
                 <Image
@@ -390,18 +390,18 @@ export default function Home() {
               </h2>
               <p className="mb-6">
                 Get the cutting-edge solutions you need to accelerate your
-                company's growth.
+                company&apos;s growth.
               </p>
               <ul className="bg-violet-500 opacity-80 p-4 rounded space-y-4">
                 <li className="relative pl-6 before:content-['✔'] before:absolute before:left-0 before:text-blue-500">
                   Contact us using the form.
                 </li>
                 <li className="relative pl-6 before:content-['✔'] before:absolute before:left-0 before:text-blue-500">
-                  We'll listen to your needs. Ask us anything.
+                  We&apos;ll listen to your needs. Ask us anything.
                 </li>
                 <li className="relative pl-6 before:content-['✔'] before:absolute before:left-0 before:text-blue-500">
                   Come away with cutting-edge solutions that help scale your
-                  company's growth rapidly.
+                  company&apos;s growth rapidly.
                 </li>
               </ul>
             </div>
